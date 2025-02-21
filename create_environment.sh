@@ -80,3 +80,21 @@ Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
 EOF
 
+#Provide execute permissions to created files
+chmod u+x $user_dir/app/reminder.sh
+chmod u+x $user_dir/modules/functions.sh
+chmod u+x $user_dir/config/config.env
+
+
+#Create startup.sh file that will execute reminder.sh
+cat <<EOF > $user_dir/startup.sh
+#!/bin/bash
+cd $user_dir
+./app/reminder.sh
+EOF
+
+#Provide execute permissions to startup.sh
+chmod u+x $user_dir/startup.sh
+
+#Execute startup.sh which in turn execute reminder.sh
+./$user_dir/startup.sh
