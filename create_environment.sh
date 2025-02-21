@@ -1,26 +1,45 @@
 #!/bin/bash
 
-#Ask the user for their name
-echo "What is your name? "
+#####################################################################
+# Script Name: create_environment.sh
+# Description: Sets up a submission reminder application environment
+#              Creates necessary directory structure and configuration
+# Author: Habeeb Dindi
+# Date: Current
+#####################################################################
 
-#Accept and store the user's name in a variable using the read command
+
+
+#############
+# User Input #
+#############
+
+# Prompt for user's name
+echo "What is your name? "
 read NAME
 
-#Store the name of the directory that will be created
+
+############################
+# Directory Structure Setup #
+############################
+
+# Define directory structure
 user_dir="submission_reminder_$NAME"
 
-#Create the directory
-mkdir $user_dir
+# Create main directory
+mkdir "$user_dir" 
 
-#Create the sub-directories
-mkdir $user_dir/{app,modules,assets,config}
+# Create subdirectories
+echo "Creating application directory structure..."
+mkdir -p "$user_dir"/{app,modules,assets,config}"
 
-#WAY 1
-#Create the files using the touch command
-#touch $user_dir/app/reminder.sh
-#touch $user_dir/modules/functions.sh
-#touch $user_dir/assetssubmissions.txt
-#touch $user_dir/config/config.env
+#########################
+# File Content Creation #
+#########################
+
+# Create application files with their contents
+# Note: Using heredoc (EOF) to create files with specific content
+
 
 #Create and add the appropriate contents to the file
 cat <<'EOF' > $user_dir/app/reminder.sh
@@ -80,21 +99,34 @@ Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
 EOF
 
-#Provide execute permissions to created files
-chmod u+x $user_dir/app/reminder.sh
-chmod u+x $user_dir/modules/functions.sh
-chmod u+x $user_dir/config/config.env
+######################
+# Set File Permissions #
+######################
 
+echo "Setting file permissions..."
+# Make scripts executable
+chmod u+x "$user_dir/app/reminder.sh"
+chmod u+x "$user_dir/modules/functions.sh"
+chmod u+x "$user_dir/config/config.env"
 
-#Create startup.sh file that will execute reminder.sh
-cat <<EOF > $user_dir/startup.sh
+#########################
+# Create Startup Script #
+#########################
+
+# Create and configure startup script
+echo "Creating startup script..."
+cat <<EOF > "$user_dir/startup.sh"
 #!/bin/bash
 cd $user_dir
 ./app/reminder.sh
 EOF
 
-#Provide execute permissions to startup.sh
-chmod u+x $user_dir/startup.sh
+# Make startup script executable
+chmod u+x "$user_dir/startup.sh"
 
-#Execute startup.sh which in turn execute reminder.sh
-./$user_dir/startup.sh
+####################
+# Run Application #
+####################
+
+echo "Starting the application..."
+./"$user_dir/startup.sh"
