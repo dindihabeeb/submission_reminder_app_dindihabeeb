@@ -93,14 +93,5 @@ The script automatically sets the following permissions:
 - Basic file system permissions
 - Read/Write access to the current directory
 
-## Troubleshooting
-If you encounter permission issues:
-1. Ensure the script has execute permissions
-2. Check directory write permissions
-3. Verify file ownership
-
-## Contributing
-Feel free to submit issues and enhancement requests.
-
-## License
-[Specify your license here]
+## Conclusion
+This repo is contains the solution to the summative assessment for trimester 2 BSE Sept. 2024
