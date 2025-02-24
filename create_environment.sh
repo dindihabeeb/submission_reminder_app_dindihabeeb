@@ -97,6 +97,11 @@ Chinemerem, Shell Navigation, not submitted
 Chiagoziem, Git, submitted
 Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
+Habeeb, Shell Navigation, not submitted
+Gilbert, Python, not submitted
+Vanessa, Shell Basics, submitted
+Divine, Shell Navigation, not submitted
+Placide, SQL and NoSQL, submitted
 EOF
 
 ######################
