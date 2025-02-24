@@ -1,7 +1,7 @@
-# Submission Reminder App Setup Script
+# Summative Assessment; Intro to Linux & IT Tools: Submission Reminder App Setup Script
 
 ## Overview
-This repository contains a shell script (`create_environment.sh`) that sets up a directory structure for the Submission Reminder App. The script creates a personalized environment that helps track student assignment submissions and sends reminders for pending submissions.
+This repository contains a shell script (`create_environment.sh`) that sets up a directory structure for the Submission Reminder App.
 
 ## Features
 - Creates a structured application directory
@@ -16,9 +16,9 @@ submission_reminder_[username]/
 ├── app/
 │   └── reminder.sh         # Main application script
 ├── modules/
-│   └── functions.sh        # Helper functions
+│   └── functions.sh        # function
 ├── assets/
-│   └── submissions.txt     # Sample submission data
+│   └── submissions.txt     # submission data
 ├── config/
 │   └── config.env         # Environment configuration
 └── startup.sh             # Application launcher
@@ -28,12 +28,12 @@ submission_reminder_[username]/
 
 1. Clone this repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/dindihabeeb/submission_reminder_app_dindihabeeb
    ```
 
 2. Navigate to the repository directory:
    ```bash
-   cd [repository-directory]
+   cd submission_reminder_app_dindihabeeb
    ```
 
 3. Make the setup script executable:
@@ -80,7 +80,7 @@ submission_reminder_[username]/
 ## Usage
 After setup, you can run the application using:
 ```bash
-./submission_reminder_[username]/startup.sh
+./create_environment.sh
 ```
 
 ## File Permissions
@@ -88,10 +88,6 @@ The script automatically sets the following permissions:
 - Execute permissions for all `.sh` files
 - Read permissions for configuration and data files
 
-## Requirements
-- Bash shell environment
-- Basic file system permissions
-- Read/Write access to the current directory
 
 ## Conclusion
 This repo is contains the solution to the summative assessment for trimester 2 BSE Sept. 2024
