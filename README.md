@@ -1,4 +1,4 @@
-# Summative Assessment; Intro to Linux & IT Tools: Submission Reminder App Setup Script
+# Summative Assessment, Intro to Linux & IT Tools: Setup Script
 
 ## Overview
 This repository contains a shell script (`create_environment.sh`) that sets up a directory structure for the Submission Reminder App.
