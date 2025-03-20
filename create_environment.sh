@@ -31,7 +31,7 @@ mkdir "$user_dir"
 
 # Create subdirectories
 echo "Creating application directory structure..."
-mkdir -p "$user_dir"/{app,modules,assets,config}"
+mkdir -p "$user_dir"/{app,modules,assets,config}
 
 #########################
 # File Content Creation #
